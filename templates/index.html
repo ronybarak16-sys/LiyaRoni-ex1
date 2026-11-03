@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R&L Fitness</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Top Global Header -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="brand-logo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <h1>R&L Fitness</h1>
+          <span class="brand-tagline">אימון כוח פונקציונלי מלא • 8 תרגילי ליבה</span>
+        </div>
+      </div>
+
+      <!-- Slide Indicator Dots (1 to 10) -->
+      <div class="header-progress-wrap">
+        <div class="slide-counter-badge" id="slide-counter-badge">
+          שקופית 1 מתוך 10 (הגדרות)
+        </div>
+        <div class="steps-dots-bar" id="steps-dots-bar">
+          <div class="step-dot active" title="שקופית 1: פתיחה והגדרות"></div>
+          <div class="step-dot" title="תרגיל 1: סקוואטים"></div>
+          <div class="step-dot" title="תרגיל 2: שכיבות סמיכה"></div>
+          <div class="step-dot" title="תרגיל 3: פשיטת מרפקים"></div>
+          <div class="step-dot" title="תרגיל 4: עליות מדרגה על כיסא"></div>
+          <div class="step-dot" title="תרגיל 5: לאנצ'ים"></div>
+          <div class="step-dot" title="תרגיל 6: סופרמן"></div>
+          <div class="step-dot" title="תרגיל 7: כפיפות בטן"></div>
+          <div class="step-dot" title="תרגיל 8: פלאנק"></div>
+          <div class="step-dot" title="שקופית 10: סיום אימון"></div>
+        </div>
+      </div>
+
+      <!-- Mode & Sound Actions -->
+      <div class="header-actions">
+        <div class="mode-status-pill">
+          <span class="indicator-dot"></span>
+          <span id="header-mode-text">אימון מתוזמן (45 שניות)</span>
+        </div>
+        <button class="icon-btn" id="btn-audio-toggle" title="השתק צלילים">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Viewport containing all 10 slides -->
+    <main class="slides-viewport">
+
+      <!-- ===================================================================
+           SLIDE 1: WELCOME AND SETUP SCREEN
+           =================================================================== -->
+      <section class="slide active" id="slide-1">
+        <div class="welcome-card">
+          <div class="welcome-hero">
+            <div class="welcome-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              תוכנית אימונים מקצועית
+            </div>
+            <h2>ברוכים הבאים לאימון כוח פונקציונאלי</h2>
+            <p class="hero-subtitle">
+              אימון מלא, מדויק ומעצים בן <strong>שעה אחת סה"כ</strong>, המשלב <strong>8 תרגילי ליבה</strong> לפיתוח כוח, יציבה וחיטוב. בכל שלב תיהנו מהסברים מפורטים, שרירי מטרה, הדמיית 3D אינטראקטיבית וטיימר מובנה.
+            </p>
+          </div>
+
+          <!-- 4 Core Features Grid -->
+          <div class="overview-grid">
+            <div class="overview-item">
+              <div class="overview-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3>שעה אחת סה"כ</h3>
+              <p>מבנה אימון מובנה ומאוזן של כ-60 דקות כולל חימום, עבודה ומנוחות</p>
+            </div>
+
+            <div class="overview-item">
+              <div class="overview-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              </div>
+              <h3>8 תרגילי יסוד</h3>
+              <p>הפעלת כל קבוצות השרירים בגוף: רגליים, חזה, גב, ידיים וליבה</p>
+            </div>
+
+            <div class="overview-item">
+              <div class="overview-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <h3>סימולציה תלת-ממדית 3D</h3>
+              <p>הדמיית תנועה אינטראקטיבית ב-360 מעלות ללימוד טכניקה ללא פשרות</p>
+            </div>
+
+            <div class="overview-item">
+              <div class="overview-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 10"></polyline><line x1="12" y1="2" x2="12" y2="4"></line></svg>
+              </div>
+              <h3>3 סטים וטיימר 45 ש'</h3>
+              <p>3 סטים מדודים לכל תרגיל, התראות קוליות ומנוחה מומלצת של 1.5 דקות</p>
+            </div>
+          </div>
+
+          <!-- Workout Mode Selection -->
+          <div class="mode-selection-section">
+            <div class="section-title-wrap">
+              <h3>בחירת מצב אימון</h3>
+              <p>התאימו את קצב האימון לרמתכם ולהעדפותיכם האישיות</p>
+            </div>
+
+            <div class="mode-cards-grid">
+              <!-- Timed Mode Card -->
+              <div class="mode-option-card selected" data-mode="timed" id="mode-card-timed">
+                <div class="mode-card-header">
+                  <div class="mode-radio-icon"></div>
+                  <div class="mode-title-wrap">
+                    <h4>אימון מתוזמן (מומלץ)</h4>
+                    <span class="mode-badge">דיוק ומשמעת ספורטיבית</span>
+                  </div>
+                </div>
+                <p class="mode-description">
+                  טיימר 45 שניות מובנה לכל סט ו-3 סטים לכל תרגיל (1.5 דקות מנוחה מומלצות בין הסטים). כפתור "הבא" ייפתח רק לאחר סיום מלא של הספירה לאחור וקפיצת באנר ההשלמה.
+                </p>
+                <ul class="mode-features-list">
+                  <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 45 שניות עבודה לכל סט ב-3 סטים</li>
+                  <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> כפתור "הבא" מוגן עד סיום הסטים המלא</li>
+                  <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> התראות צליל בכל מעבר ומנוחה</li>
+                </ul>
+              </div>
+
+              <!-- Untimed Mode Card -->
+              <div class="mode-option-card" data-mode="untimed" id="mode-card-untimed">
+                <div class="mode-card-header">
+                  <div class="mode-radio-icon"></div>
+                  <div class="mode-title-wrap">
+                    <h4>אימון חופשי (ללא טיימר כפוי)</h4>
+                    <span class="mode-badge">קצב אישי גמיש</span>
+                  </div>
+                </div>
+                <p class="mode-description">
+                  אין אכיפת זמן או המתנה. תוכלו לבצע חזרות לפי תחושתכם, והמעבר לתרגיל הבא זמין ונגיש תמיד בחופשיות מלאה לאורך כל האימון.
+                </p>
+                <ul class="mode-features-list">
+                  <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> מעבר חופשי ופתוח בין התרגילים</li>
+                  <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> אופציה להפעלת טיימר ידני לצורך מדידה</li>
+                  <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> מתאים למי שמתאמן לפי מספר חזרות</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Workout Action -->
+          <div class="welcome-action-bar">
+            <button class="btn-start-workout" id="btn-start-workout">
+              <span>התחילו את האימון עכשיו</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 2: EXERCISE 1 - SQUATS (סקוואטים)
+           =================================================================== -->
+      <section class="slide" id="slide-2">
+        <div class="exercise-layout">
+          <!-- Right: Instructions & 3D trigger -->
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 1 מתוך 8</span>
+                <h2>סקוואטים</h2>
+                <span class="exercise-name-en">Squats</span>
+              </div>
+            </div>
+
+            <!-- Target Muscles -->
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>שריר הישבן וארבע ראשי</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Glutes & Quadriceps</span>
+              </div>
+            </div>
+
+            <!-- Detailed Instructions -->
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                עמדו בפיסוק ברוחב הכתפיים, כאשר כפות הרגליים פונות מעט החוצה. שמרו על שכמות אסופות וגב ישר וזקוף. רדו עם האגן לכיוון הרצפה תוך שמירה על גב ישר, עד לזווית של 90 מעלות בברכיים, ולאחר מכן דחפו חזרה מעלה.
+              </div>
+            </div>
+
+            <!-- 3D Simulation Trigger Button -->
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="squats" data-exercise-title="סקוואטים (Squats)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Left: Stock Image & Set/Timer Tracker -->
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/squat.jfif" alt="סקוואטים" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">עמידת סקוואט מדויקת</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <!-- Sets status indicators -->
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-2-1">
+                  <span class="set-label">סט 1</span>
+                  <span class="set-status-text">סט נוכחי</span>
+                </div>
+                <div class="set-pill" id="set-pill-2-2">
+                  <span class="set-label">סט 2</span>
+                  <span class="set-status-text">ממתין</span>
+                </div>
+                <div class="set-pill" id="set-pill-2-3">
+                  <span class="set-label">סט 3</span>
+                  <span class="set-status-text">ממתין</span>
+                </div>
+              </div>
+
+              <!-- Circular countdown dial -->
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-2" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-2">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timer Controls -->
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-2">איפוס טיימר</button>
+              </div>
+
+              <!-- Rest Notice -->
+              <div class="rest-recommendation-box" id="rest-notice-2" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>מומלץ לנוח 1.5 דקות בין הסטים להחזרת אנרגיה אופטימלית</span>
+              </div>
+
+              <!-- Exercise Completion Banner -->
+              <div class="exercise-completion-banner" id="completion-banner-2">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 3: EXERCISE 2 - PUSH-UPS (שכיבות סמיכה)
+           =================================================================== -->
+      <section class="slide" id="slide-3">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 2 מתוך 8</span>
+                <h2>שכיבות סמיכה</h2>
+                <span class="exercise-name-en">Push-ups</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>חזה וכתף קדמית</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Chest & Anterior Deltoid</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                התמקמו על שש, רגליים ישרות לאחור וכפות רגליים צמודות. כפות הידיים על הרצפה במפתח מעט רחב מרוחב הכתפיים. כופפו את המרפקים כדי להוריד את בית החזה לאט לכיוון הרצפה, ודחפו חזרה למעלה בעוצמה ובמהירות. ודאו שאין שקיעה של האגן; התנועה מגיעה ממפרק הכתף.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="pushups" data-exercise-title="שכיבות סמיכה (Push-ups)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/chest.jfif" alt="שכיבות סמיכה" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">מנח פלג גוף עליון יציב</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-3-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-3-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-3-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-3" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-3">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-3">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-3">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-3" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>מומלץ לנוח 1.5 דקות בין הסטים להחזרת אנרגיה אופטימלית</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-3">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 4: EXERCISE 3 - BENCH DIPS (פשיטת מרפקים על ספה או שולחן)
+           =================================================================== -->
+      <section class="slide" id="slide-4">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 3 מתוך 8</span>
+                <h2>פשיטת מרפקים על ספה או שולחן</h2>
+                <span class="exercise-name-en">Bench Dips</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>יד אחורית</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Triceps Brachii</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                שבו על קצה הספה או השולחן, הניחו את כפות הידיים לצד האגן כשהאצבעות פונות קדימה. הזיזו את האגן מעט קדימה מחוץ לקצה, כשהרגליים ישרות קדימה על הרצפה. כופפו באיטיות את המרפקים כדי להוריד את הגוף, תוך שמירה על מרפקים קרובים לגוף, ואז דחפו חזרה בעוצמה באמצעות הזרועות.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="bench-dips" data-exercise-title="פשיטת מרפקים על ספה/שולחן (Bench Dips)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/triceps.jfif" alt="פשיטת מרפקים" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">עבודת יד אחורית מדויקת</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-4-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-4-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-4-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-4" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-4">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-4">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-4">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-4" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>מומלץ לנוח 1.5 דקות בין הסטים להחזרת אנרגיה אופטימלית</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-4">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 5: EXERCISE 4 - STEP-UPS ON CHAIR (עליות מדרגה על כיסא)
+           =================================================================== -->
+      <section class="slide" id="slide-5">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 4 מתוך 8</span>
+                <h2>עליות מדרגה על כיסא</h2>
+                <span class="exercise-name-en">Step-ups on Chair</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>ארבע ראשי ואמסטרינג</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Quadriceps & Hamstrings</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                הציבו כיסא יציב לפניכם, הניחו רגל אחת במרכז מושב הכיסא. דחפו בעוצמה דרך כף הרגל שעל הכיסא עד ליישור מלא של הברך, כאשר הרגל השנייה מרחפת באוויר ללא תמיכה. הימנעו מרכינה מוגזמת קדימה כדי להגן על הברך. רדו לאט ובשליטה. החליפו רגליים כל 20 שניות.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="step-ups" data-exercise-title="עליות מדרגה על כיסא (Step-ups)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/chair.jfif" alt="עליות מדרגה" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">דחיפת רגל יציבה ומבוקרת</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-5-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-5-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-5-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-5" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-5">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-5">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-5" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>החליפו רגליים כל 20 שניות, ונוחו 1.5 דקות בסיום הסט</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-5">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 6: EXERCISE 5 - LUNGES (לאנצ'ים)
+           =================================================================== -->
+      <section class="slide" id="slide-6">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 5 מתוך 8</span>
+                <h2>לאנצ'ים</h2>
+                <span class="exercise-name-en">Lunges</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>ארבע ראשי, המסטרינגס וישבן</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Quads, Hamstrings & Glutes</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                הציבו רגל אחת לאחור נשענת על כריות האצבעות, ברוחב פיסוק מתון מהרגל הקדמית. בית חזה מורם, גב ישר ויציב עם נטייה קלה קדימה. רדו עמוק ולאט ככל שניתן כאשר הברך האחורית שואפת לרצפה, ודחפו חזרה דרך כף הרגל הקדמית.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="lunges" data-exercise-title="לאנצ'ים (Lunges)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/lange.jpg" alt="לאנצ'ים" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">ירידה עמוקה ואיזון שרירי</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-6-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-6-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-6-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-6" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-6">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-6">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-6">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-6" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>מומלץ לנוח 1.5 דקות בין הסטים להחזרת אנרגיה אופטימלית</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-6">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 7: EXERCISE 6 - SUPERMAN (סופרמן)
+           =================================================================== -->
+      <section class="slide" id="slide-7">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 6 מתוך 8</span>
+                <h2>סופרמן</h2>
+                <span class="exercise-name-en">Superman</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>גב ושרשרת אחורית</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Back & Posterior Chain</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                שכבו על הבטן עם ידיים ישרות קדימה ורגליים ישרות לאחור. הרימו בו-זמנית את הידיים, החזה וכפות הרגליים מעט מעל הרצפה תוך כיווץ שרירי הגב והישבן. שהו באוויר למשך 2 שניות ורדו באיטיות חזרה.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="superman" data-exercise-title="סופרמן (Superman)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/superman.jfif" alt="סופרמן" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">כיווץ שרירי גב וזקיפים</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-7-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-7-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-7-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-7" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-7">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-7">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-7">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-7" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>החזיקו 2 שניות בשיא הגובה, ונוחו 1.5 דקות בסיום הסט</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-7">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 8: EXERCISE 7 - CRUNCHES (כפיפות בטן)
+           =================================================================== -->
+      <section class="slide" id="slide-8">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 7 מתוך 8</span>
+                <h2>כפיפות בטן</h2>
+                <span class="exercise-name-en">Crunches</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>שרירי בטן</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Rectus Abdominis</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                שכבו על הגב עם ברכיים כפופות וכפות רגליים מונחות על הרצפה. הידיים תומכות בעורף, המבט ממוקד קדימה לתקרה. הרימו את בית החזה מהרצפה באמצעות כיווץ שרירי הבטן, תוך שמירה על המבט קדימה ללא משיכת הצוואר. החזיקו בכיווץ למשך שנייה אחת ורדו חזרה. עלו רק עד חצי הדרך, לא עד הברכיים.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="crunches" data-exercise-title="כפיפות בטן (Crunches)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/crunches.jpg" alt="כפיפות בטן" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">כיווץ בטני מדויק ללא משיכת צוואר</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-8-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-8-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-8-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-8" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-8">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-8">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-8">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-8" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>החזיקו שנייה אחת בכיווץ שיא, ונוחו 1.5 דקות בסיום הסט</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-8">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>התרגיל הושלם בהצלחה!</h4>
+                    <p>סיימת את 3 הסטים במלואם. עבור לתרגיל הבא.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 9: EXERCISE 8 - PLANK (פלאנק)
+           =================================================================== -->
+      <section class="slide" id="slide-9">
+        <div class="exercise-layout">
+          <div class="exercise-main-card">
+            <div class="exercise-header-top">
+              <div class="exercise-names">
+                <span class="exercise-number-tag">תרגיל 8 מתוך 8 (תרגיל סיום)</span>
+                <h2>פלאנק</h2>
+                <span class="exercise-name-en">Plank</span>
+              </div>
+            </div>
+
+            <div class="target-muscles-wrap">
+              <span class="section-label">שרירי מטרה עיקריים:</span>
+              <div class="muscles-pills-list">
+                <span class="muscle-badge"><span class="badge-dot"></span>שרירי בטן וליבה</span>
+                <span class="muscle-badge"><span class="badge-dot"></span>Core & Abdominals</span>
+              </div>
+            </div>
+
+            <div class="instructions-container">
+              <span class="section-label">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                הוראות ביצוע מפורטות:
+              </span>
+              <div class="instructions-text-box">
+                רדו למנח פלאנק על האמות, כאשר המרפקים ממוקמים ישירות מתחת לכתפיים, והרגליים ישרות וצמודות. שמרו על אגן מוגבה בגובה החזה והחזיקו במנח סטטי בעזרת שרירי הליבה לאורך כל משך התרגיל.
+              </div>
+            </div>
+
+            <div class="simulation-trigger-wrap">
+              <button class="btn-open-simulation" data-exercise-id="plank" data-exercise-title="פלאנק (Plank)">
+                <svg class="cube-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <span>ראה דוגמה תלת מימדית</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="exercise-side-column">
+            <div class="exercise-media-card">
+              <img src="/static/images/plank.jpg" alt="פלאנק" class="exercise-photo" loading="lazy">
+              <div class="photo-overlay-tag">מנח יציב ללא שקיעת אגן</div>
+            </div>
+
+            <div class="tracker-card">
+              <div class="tracker-card-header">
+                <h3>מעקב סטים וטיימר</h3>
+                <span class="exercise-number-tag">3 סטים • 45 שנ'</span>
+              </div>
+
+              <div class="sets-tracker-row">
+                <div class="set-pill active" id="set-pill-9-1"><span class="set-label">סט 1</span><span class="set-status-text">סט נוכחי</span></div>
+                <div class="set-pill" id="set-pill-9-2"><span class="set-label">סט 2</span><span class="set-status-text">ממתין</span></div>
+                <div class="set-pill" id="set-pill-9-3"><span class="set-label">סט 3</span><span class="set-status-text">ממתין</span></div>
+              </div>
+
+              <div class="timer-dial-container">
+                <div class="timer-svg-wrap">
+                  <svg class="timer-svg" viewBox="0 0 160 160">
+                    <circle class="timer-bg-circle" cx="80" cy="80" r="70"></circle>
+                    <circle class="timer-progress-circle" id="timer-circle-9" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="timer-inner-content">
+                    <span class="timer-time-display" id="timer-display-9">00:45</span>
+                    <span class="timer-caption">שניות לסט</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer-buttons-row">
+                <button class="btn-timer-primary" id="btn-timer-toggle-9">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>הפעל סט</span>
+                </button>
+                <button class="btn-timer-secondary" id="btn-timer-reset-9">איפוס טיימר</button>
+              </div>
+
+              <div class="rest-recommendation-box" id="rest-notice-9" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>החזיקו במנח סטטי מתוח, ונוחו 1.5 דקות בסיום הסט</span>
+              </div>
+
+              <div class="exercise-completion-banner" id="completion-banner-9">
+                <div class="completion-banner-text">
+                  <svg class="banner-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path><path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                  <div>
+                    <h4>כל התרגילים הושלמו בהצלחה!</h4>
+                    <p>סיימת את תרגיל הסיום. לחצו כעת על "הבא" לצפייה בסיכום האימון החגיגי!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 10: COMPLETION SCREEN
+           =================================================================== -->
+      <section class="slide" id="slide-10">
+        <div class="completion-container">
+          <canvas class="confetti-canvas" id="confetti-canvas"></canvas>
+
+          <div class="completion-content">
+            <div class="celebration-trophy-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+              </svg>
+            </div>
+
+            <h2>סיימת בהצלחה את האימון, כל הכבוד!</h2>
+            <p class="completion-subtitle">
+              הפגנת משמעת יוצאת דופן, נחישות ועבודה מדויקת בכל 8 תרגילי היסוד. הגוף שלך מודה לך על המאמץ והאנרגיה!
+            </p>
+
+            <!-- Workout Summary Metrics Cards -->
+            <div class="stats-summary-grid">
+              <div class="stat-metric-card">
+                <div class="stat-value" id="stat-val-exercises">8 / 8</div>
+                <div class="stat-label">תרגילים הושלמו</div>
+              </div>
+
+              <div class="stat-metric-card">
+                <div class="stat-value" id="stat-val-sets">24</div>
+                <div class="stat-label">סה"כ סטים שבוצעו</div>
+              </div>
+
+              <div class="stat-metric-card">
+                <div class="stat-value" id="stat-val-time">~55 דק'</div>
+                <div class="stat-label">זמן אימון כולל</div>
+              </div>
+
+              <div class="stat-metric-card">
+                <div class="stat-value" id="stat-val-calories">390 קק"ל</div>
+                <div class="stat-label">קלוריות משוערות שנשרפו</div>
+              </div>
+            </div>
+
+            <!-- Recovery & Hydration Guidance -->
+            <div class="recovery-tip-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+              <div>
+                <h4>התאוששות מיטבית לאחר אימון</h4>
+                <p>הקפידו לשתות כעת 2-3 כוסות מים, בצעו מתיחות קלות לשחרור שרירי הרגליים והגב, ושלבו ארוחה מזינה המכילה חלבון איכותי ופחמימה מורכבת תוך 60 דקות.</p>
+              </div>
+            </div>
+
+            <!-- Completion Action Buttons -->
+            <div class="completion-actions">
+              <button class="btn-restart-workout" id="btn-restart-workout">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                <span>התחל אימון מחדש</span>
+              </button>
+              <button class="btn-print-summary" id="btn-print-summary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                <span>הדפס / שמור סיכום אימון</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Navigation Footer Bar -->
+    <footer class="global-nav-bar" id="global-nav-bar" style="display: none;">
+      <!-- Global Back Button (ALWAYS active across screens) -->
+      <button class="btn-nav btn-nav-back" id="btn-nav-back" title="חזרה לשקופית הקודמת">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>חזור לשלב הקודם</span>
+      </button>
+
+      <!-- Next Button (With tooltip wrapper when locked) -->
+      <div class="next-btn-wrapper" id="next-btn-wrapper">
+        <button class="btn-nav btn-nav-next" id="btn-nav-next">
+          <span>המשך לתרגיל הבא</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ===================================================================
+       THREE.JS 3D STATIC POSTURE SIMULATION MODAL
+       =================================================================== -->
+  <div class="modal-overlay" id="three-simulation-modal">
+    <div class="modal-window">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modal-exercise-title">הדמיית מנח סטטי נכון</h3>
+          <span class="modal-subbadge" id="modal-posture-badge">מנח סטטי נכון (360°)</span>
+        </div>
+        <button class="btn-close-modal" id="btn-close-sim-modal" title="סגור (Esc)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- 3D Canvas Viewport -->
+      <div class="canvas-wrapper">
+        <div id="three-canvas-container"></div>
+        <div class="camera-hint-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          גררו עם העכבר לסיבוב 360°, גלגלת לזום
+        </div>
+      </div>
+
+      <!-- Modal Bottom Controller: Static Posture Guidance & Camera Views -->
+      <div class="modal-bottom-controls">
+        <div class="posture-guidance-card">
+          <div class="posture-guidance-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span id="posture-guidance-title">דגשי יציבה וטכניקה מדויקת:</span>
+          </div>
+          <ul class="posture-cues-list" id="posture-cues-list">
+            <li>טוען נתוני יציבה...</li>
+          </ul>
+        </div>
+
+        <div class="controls-actions-row">
+          <div class="view-preset-buttons">
+            <span class="view-label">זוויות צפייה:</span>
+            <button class="btn-ctrl active" id="btn-cam-reset" title="חזרה לזווית ברירת המחדל">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"></path><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+              <span>איפוס זווית</span>
+            </button>
+            <button class="btn-ctrl" id="btn-cam-side" title="מבט צד לבחינת זוויות מפרקים">
+              <span>מבט צד (90°)</span>
+            </button>
+            <button class="btn-ctrl" id="btn-cam-front" title="מבט קדמי לבחינת יישור הגוף">
+              <span>מבט קדמי</span>
+            </button>
+            <button class="btn-ctrl" id="btn-cam-iso" title="מבט אלכסוני תלת-ממדי">
+              <span>מבט אלכסוני</span>
+            </button>
+          </div>
+
+          <div class="posture-status-tag">
+            <span class="static-indicator-dot"></span>
+            <span>מודל סטטי מדויק ללא תנועה</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local and CDN Scripts for Three.js & OrbitControls -->
+  <script src="/static/js/three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
+  <script src="/static/js/OrbitControls.js"></script>
+  <script>
+    if (typeof THREE !== 'undefined' && !THREE.OrbitControls) {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"><\/script>');
+    }
+  </script>
+
+  <!-- Application Modules -->
+  <script src="/static/js/audio.js"></script>
+  <script src="/static/js/confetti.js"></script>
+  <script src="/static/js/mannequin.js"></script>
+  <script src="/static/js/animations.js"></script>
+  <script src="/static/js/simulator.js"></script>
+  <script src="/static/js/app.js"></script>
+
+</body>
+</html>
