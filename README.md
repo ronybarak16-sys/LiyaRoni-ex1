@@ -12,7 +12,7 @@
 5. [How to Run (הוראות הרצה מקומית)](#5-how-to-run-הוראות-הרצה-מקומית)
 6. [Technical Stack & Architecture (ארכיטקטורה טכנולוגית)](#6-technical-stack--architecture-ארכיטקטורה-טכנולוגית)
 7. [REST API Endpoints (ממשק נקודות קצה)](#7-rest-api-endpoints-ממשק-נקודות-קצה)
-8. [Project History & Technical Decisions (היסטוריית פיתוח והחלטות טכניות)](docs/PROJECT_FULL_HISTORY_AND_DECISIONS.md)
+8. [Project History & Technical Decisions (היסטוריית פיתוח והחלטות טכניות)](docs/EXACT_FULL_CONVERSATION_TRANSCRIPTS.md)
 
 ---
 
